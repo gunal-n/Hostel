@@ -1,9 +1,9 @@
 // Edit these values before publishing the site.
 const HOSTEL_CONFIG = {
-  phone: "910000000000", // Replace with country code + phone number, digits only.
-  whatsapp: "910000000000", // Replace with country code + phone number, digits only.
-  address: "ADD STREET, AREA, CITY, PINCODE",
-  mapsUrl: "https://maps.google.com/"
+  phone: "919092111166",
+  whatsapp: "919092111166",
+  address: "1, 5th Main Rd, New Colony, Chromepet, Chennai, Tambaram, Tamil Nadu 600044",
+  mapsUrl: "https://maps.app.goo.gl/PDqav23wwQJYVnG56"
 };
 
 document.getElementById("year").textContent = new Date().getFullYear();
