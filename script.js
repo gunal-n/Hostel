@@ -9,16 +9,13 @@ const HOSTEL_CONFIG = {
   whatsapp: "919092111166",
 
   address:
-    "1, 5th Main Rd, New Colony, Chromepet, Chennai, Tambaram, Tamil Nadu 600044",
+    "1, 5th Main Rd, New Colony, Chromepet, Chennai, Tamil Nadu 600044",
 
   mapsUrl:
     "https://www.google.com/maps/search/?api=1&query=" +
     encodeURIComponent(
-      "Nikilan Men's Hostel, 1, 5th Main Rd, New Colony, Chromepet, Chennai, Tamil Nadu 600044"
-    ),
-
-  savedMapsUrl:
-    "https://maps.app.goo.gl/PDqav23wwQJYVnG56"
+      "1, 5th Main Rd, New Colony, Chromepet, Chennai, Tamil Nadu 600044"
+    )
 };
 
 // ==========================================
@@ -31,24 +28,31 @@ if (yearElement) {
 }
 
 // ==========================================
-// CONTACT AND LOCATION LINKS
-// Declare each element only ONCE
+// GOOGLE MAPS
 // ==========================================
 const mapLink = document.getElementById("mapLink");
-const whatsappLink = document.getElementById("whatsappLink");
-const phoneLink = document.getElementById("phoneLink");
+const savedMapLink = document.getElementById("savedMapLink");
 
-// Google Maps
 if (mapLink) {
   mapLink.href = HOSTEL_CONFIG.mapsUrl;
   mapLink.target = "_blank";
   mapLink.rel = "noopener noreferrer";
 }
 
-// WhatsApp
+if (savedMapLink) {
+  savedMapLink.href = HOSTEL_CONFIG.mapsUrl;
+  savedMapLink.target = "_blank";
+  savedMapLink.rel = "noopener noreferrer";
+}
+
+// ==========================================
+// WHATSAPP CONTACT
+// ==========================================
+const whatsappLink = document.getElementById("whatsappLink");
+
 if (whatsappLink) {
   const message =
-    "Hi, I would like to enquire about room availability at Nikilan Men's Hostel.";
+    "Hi, I would like to enquire about room availability at Nikilan Men's Hostel. Please share the monthly rent, deposit and facilities.";
 
   whatsappLink.href =
     "https://wa.me/" +
@@ -60,7 +64,11 @@ if (whatsappLink) {
   whatsappLink.rel = "noopener noreferrer";
 }
 
-// Phone call
+// ==========================================
+// PHONE CALL
+// ==========================================
+const phoneLink = document.getElementById("phoneLink");
+
 if (phoneLink) {
   phoneLink.href = "tel:+" + HOSTEL_CONFIG.phone;
 }
@@ -88,7 +96,6 @@ if (enterSite) {
   enterSite.addEventListener("click", closeIntro);
 }
 
-// Automatically close the intro after 3.8 seconds
 if (intro) {
   window.setTimeout(closeIntro, 3800);
 }

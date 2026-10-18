@@ -1,14 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Explore Nikilan Men's Hostel — room options, facilities, location and availability." />
-  <link rel="icon" type="image/x-icon" href="/nikilan-favicon.png"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Explore Nikilan Men's Hostel — rooms, facilities, location and availability.">
+
   <title>Nikilan Men's Hostel | A Better Place to Stay</title>
 
-  <!-- Tailwind CSS CDN: ideal for a starter project. For production, use Tailwind CLI/build. -->
+  <!-- Hostel favicon -->
+  <link rel="icon" type="image/png" href="assets/nikilan-favicon.png">
+  <link rel="apple-touch-icon" href="assets/nikilan-favicon.png">
+
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
+
   <script>
     tailwind.config = {
       theme: {
@@ -25,33 +32,70 @@
           }
         }
       }
-    }
+    };
   </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
+
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body class="bg-cream text-ink font-body">
-  <!-- Intro overlay: animated welcome screen -->
+
+  <!-- Welcome screen -->
   <div id="intro" class="intro-screen" aria-label="Welcome to Nikilan Men's Hostel">
+
     <div class="intro-glow"></div>
+
     <div class="intro-content">
-      <div class="brand-mark">VSR</div>
-      <p class="eyebrow intro-eyebrow">YOUR COMFORT. YOUR SPACE.</p>
-      <h1 class="intro-title">Welcome to<br><em>Nikilan Men's Hostel</em></h1>
-      <p class="intro-copy">A comfortable place to live, rest and grow.</p>
-      <button id="enterSite" class="gold-button intro-button">Explore the hostel <span aria-hidden="true">↗</span></button>
-      <div class="intro-progress"><span></span></div>
+      <div class="brand-mark">NI</div>
+
+      <p class="eyebrow intro-eyebrow">
+        YOUR COMFORT. YOUR SPACE.
+      </p>
+
+      <h1 class="intro-title">
+        Welcome to<br>
+        <em>Nikilan Men's Hostel</em>
+      </h1>
+
+      <p class="intro-copy">
+        A comfortable place to live, rest and grow.
+      </p>
+
+      <button id="enterSite" class="gold-button intro-button">
+        Explore the hostel <span>↗</span>
+      </button>
+
+      <div class="intro-progress">
+        <span></span>
+      </div>
     </div>
   </div>
 
+  <!-- Navigation -->
   <header class="site-header">
+
     <a class="brand" href="#home" aria-label="Nikilan Men's Hostel home">
       <div class="brand-mark small">NI</div>
-      <div><strong>NIKILAN</strong><small>MEN'S HOSTEL</small></div>
+
+      <div>
+        <strong>NIKILAN</strong>
+        <small>MEN'S HOSTEL</small>
+      </div>
     </a>
-    <button id="menuToggle" class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+
+    <button
+      id="menuToggle"
+      class="menu-toggle"
+      aria-label="Toggle navigation"
+      aria-expanded="false">
+      ☰
+    </button>
+
     <nav id="mainNav" class="main-nav">
       <a href="#home" class="active">Home</a>
       <a href="#about">About</a>
@@ -60,237 +104,531 @@
       <a href="#gallery">Gallery</a>
       <a href="#location">Location</a>
     </nav>
-    <a href="#contact" class="gold-button header-cta">Enquire now <span>↗</span></a>
+
+    <a href="#contact" class="gold-button header-cta">
+      Enquire now <span>↗</span>
+    </a>
+
   </header>
 
   <main>
-    <!-- Hero uses a video/image placeholder. Replace the source when your media is ready. -->
+
+    <!-- Home hero -->
     <section id="home" class="hero">
+
       <div class="hero-media">
-        <!-- To use your video later, uncomment the video element and replace assets/videos/hostel-tour.mp4.
-        <video class="hero-video" autoplay muted loop playsinline poster="assets/images/hero.jpg">
+
+        <!-- Add your hostel video later if required.
+        <video class="hero-video" autoplay muted loop playsinline>
           <source src="assets/videos/hostel-tour.mp4" type="video/mp4">
         </video>
         -->
+
         <div class="media-placeholder hero-placeholder">
           <span class="placeholder-icon">▶</span>
           <span>HOSTEL VIDEO / HERO IMAGE</span>
-          <small>Recommended: 1920 × 1080 px · landscape</small>
+          <small>Recommended: 1920 × 1080 px</small>
         </div>
+
       </div>
+
       <div class="hero-shade"></div>
+
       <div class="hero-inner page-width">
+
         <p class="eyebrow reveal">A PLACE TO CALL YOUR OWN</p>
-        <h2 class="hero-title reveal">Comfort that feels<br><em>like home.</em></h2>
-        <p class="hero-description reveal">Thoughtfully arranged rooms, useful facilities and a welcoming space for students and working professionals.</p>
+
+        <h2 class="hero-title reveal">
+          Comfort that feels<br>
+          <em>like home.</em>
+        </h2>
+
+        <p class="hero-description reveal">
+          Thoughtfully arranged rooms, useful facilities and a welcoming
+          space for students and working professionals.
+        </p>
+
         <div class="hero-actions reveal">
-          <a href="#rooms" class="gold-button">Explore rooms <span>↓</span></a>
-          <a href="#contact" class="text-link">Ask about availability <span>↗</span></a>
+          <a href="#rooms" class="gold-button">
+            Explore rooms <span>↓</span>
+          </a>
+
+          <a href="#contact" class="text-link">
+            Ask about availability <span>↗</span>
+          </a>
         </div>
-        <div class="hero-note"><span class="live-dot"></span> Room availability shown below — contact us to confirm.</div>
+
+        <div class="hero-note">
+          <span class="live-dot"></span>
+          Room availability shown below — contact us to confirm.
+        </div>
+
       </div>
-      <a class="scroll-cue" href="#about"><span></span> SCROLL TO EXPLORE</a>
+
+      <a class="scroll-cue" href="#about">
+        <span></span> SCROLL TO EXPLORE
+      </a>
+
     </section>
 
+    <!-- About -->
     <section id="about" class="section about-section page-width">
+
       <div class="about-image reveal">
         <div class="media-placeholder image-placeholder">
           <span class="placeholder-icon">＋</span>
           <span>ADD YOUR HOSTEL PHOTO</span>
-          <small>Recommended: 1200 × 1400 px · portrait</small>
+          <small>Recommended: 1200 × 1400 px</small>
         </div>
-        <div class="image-stamp"><strong>NH</strong><span>YOUR SPACE<br>YOUR COMFORT</span></div>
+
+        <div class="image-stamp">
+          <strong>NI</strong>
+          <span>YOUR SPACE<br>YOUR COMFORT</span>
+        </div>
       </div>
+
       <div class="about-copy reveal">
+
         <p class="eyebrow">WELCOME TO NIKILAN</p>
-        <h2 class="section-title">A better stay<br><em>starts here.</em></h2>
-        <p class="body-copy">Nikilan Men's Hostel is designed for people who need a practical, comfortable place to stay while they study or work. Explore our room options and facilities, then contact us to confirm current availability, pricing and house rules.</p>
+
+        <h2 class="section-title">
+          A better stay<br>
+          <em>starts here.</em>
+        </h2>
+
+        <p class="body-copy">
+          Nikilan Men's Hostel is designed for people who need a practical,
+          comfortable place to stay while they study or work. Explore our
+          room options and facilities, then contact us to confirm current
+          availability, pricing and house rules.
+        </p>
+
         <div class="stats-row">
-          <div><strong>01</strong><span>Comfort-first<br>living</span></div>
-          <div><strong>02</strong><span>Room options<br>to compare</span></div>
-          <div><strong>03</strong><span>Simple enquiry<br>process</span></div>
+          <div>
+            <strong>01</strong>
+            <span>Comfort-first<br>living</span>
+          </div>
+
+          <div>
+            <strong>02</strong>
+            <span>Room options<br>to compare</span>
+          </div>
+
+          <div>
+            <strong>03</strong>
+            <span>Simple enquiry<br>process</span>
+          </div>
         </div>
-        <a href="#contact" class="text-link dark-link">Talk to us about your stay <span>↗</span></a>
+
+        <a href="#contact" class="text-link dark-link">
+          Talk to us about your stay <span>↗</span>
+        </a>
+
       </div>
     </section>
 
+    <!-- Rooms -->
     <section id="rooms" class="section rooms-section">
+
       <div class="page-width">
+
         <div class="section-heading reveal">
           <p class="eyebrow">FIND YOUR SPACE</p>
-          <h2 class="section-title">Rooms & <em>availability</em></h2>
-          <p class="section-subtitle">Choose a room type to enquire about. Availability can change, so confirm before visiting.</p>
+
+          <h2 class="section-title">
+            Rooms & <em>availability</em>
+          </h2>
+
+          <p class="section-subtitle">
+            Choose a room type to enquire about. Availability can change,
+            so confirm before visiting.
+          </p>
         </div>
+
         <div class="room-grid">
+
+          <!-- Four sharing -->
           <article class="room-card reveal">
+
             <div class="room-image">
-              <div class="media-placeholder"><span class="placeholder-icon">＋</span><span>SHARING ROOM PHOTO</span><small>1200 × 900 px · landscape</small></div>
+              <div class="media-placeholder">
+                <span class="placeholder-icon">＋</span>
+                <span>SHARING ROOM PHOTO</span>
+                <small>1200 × 900 px</small>
+              </div>
+
               <span class="room-badge">Sharing</span>
             </div>
+
             <div class="room-content">
-              <div class="room-title-line"><h3>4-Sharing Room</h3><span class="room-price">₹ <b>ADD PRICE</b><small>/ month</small></span></div>
-              <p>Shared room option for residents who prefer a budget-friendly stay.</p>
-              <div class="room-meta"><span>↗ Shared occupancy</span><span>Availability: <b class="status ask">Confirm</b></span></div>
-              <button class="room-enquire" data-room="4-Sharing Room">Enquire about this room <span>↗</span></button>
+
+              <div class="room-title-line">
+                <h3>4-Sharing Room</h3>
+
+                <span class="room-price">
+                  ₹ <b>ADD PRICE</b>
+                  <small>/ month</small>
+                </span>
+              </div>
+
+              <p>
+                Shared room option for residents who prefer a
+                budget-friendly stay.
+              </p>
+
+              <div class="room-meta">
+                <span>↗ Shared occupancy</span>
+                <span>Availability: <b class="status ask">Confirm</b></span>
+              </div>
+
+              <button class="room-enquire" data-room="4-Sharing Room">
+                Enquire about this room <span>↗</span>
+              </button>
+
             </div>
           </article>
+
+          <!-- Three sharing -->
           <article class="room-card reveal">
+
             <div class="room-image">
-              <div class="media-placeholder"><span class="placeholder-icon">＋</span><span>SHARING ROOM PHOTO</span><small>1200 × 900 px · landscape</small></div>
+              <div class="media-placeholder">
+                <span class="placeholder-icon">＋</span>
+                <span>SHARING ROOM PHOTO</span>
+                <small>1200 × 900 px</small>
+              </div>
+
               <span class="room-badge">Popular</span>
             </div>
+
             <div class="room-content">
-              <div class="room-title-line"><h3>3-Sharing Room</h3><span class="room-price">₹ <b>ADD PRICE</b><small>/ month</small></span></div>
-              <p>A little more personal space while sharing the room with others.</p>
-              <div class="room-meta"><span>↗ Shared occupancy</span><span>Availability: <b class="status ask">Confirm</b></span></div>
-              <button class="room-enquire" data-room="3-Sharing Room">Enquire about this room <span>↗</span></button>
+
+              <div class="room-title-line">
+                <h3>3-Sharing Room</h3>
+
+                <span class="room-price">
+                  ₹ <b>ADD PRICE</b>
+                  <small>/ month</small>
+                </span>
+              </div>
+
+              <p>
+                A little more personal space while sharing the room
+                with others.
+              </p>
+
+              <div class="room-meta">
+                <span>↗ Shared occupancy</span>
+                <span>Availability: <b class="status ask">Confirm</b></span>
+              </div>
+
+              <button class="room-enquire" data-room="3-Sharing Room">
+                Enquire about this room <span>↗</span>
+              </button>
+
             </div>
           </article>
+
+          <!-- Two sharing -->
           <article class="room-card reveal">
+
             <div class="room-image">
-              <div class="media-placeholder"><span class="placeholder-icon">＋</span><span>ROOM PHOTO</span><small>1200 × 900 px · landscape</small></div>
+              <div class="media-placeholder">
+                <span class="placeholder-icon">＋</span>
+                <span>ROOM PHOTO</span>
+                <small>1200 × 900 px</small>
+              </div>
+
               <span class="room-badge">More privacy</span>
             </div>
+
             <div class="room-content">
-              <div class="room-title-line"><h3>2-Sharing Room</h3><span class="room-price">₹ <b>ADD PRICE</b><small>/ month</small></span></div>
-              <p>A two-person sharing option. Ask us about the room and facilities.</p>
-              <div class="room-meta"><span>↗ Shared occupancy</span><span>Availability: <b class="status ask">Confirm</b></span></div>
-              <button class="room-enquire" data-room="2-Sharing Room">Enquire about this room <span>↗</span></button>
+
+              <div class="room-title-line">
+                <h3>2-Sharing Room</h3>
+
+                <span class="room-price">
+                  ₹ <b>ADD PRICE</b>
+                  <small>/ month</small>
+                </span>
+              </div>
+
+              <p>
+                A two-person sharing option. Ask us about the room
+                and facilities.
+              </p>
+
+              <div class="room-meta">
+                <span>↗ Shared occupancy</span>
+                <span>Availability: <b class="status ask">Confirm</b></span>
+              </div>
+
+              <button class="room-enquire" data-room="2-Sharing Room">
+                Enquire about this room <span>↗</span>
+              </button>
+
             </div>
           </article>
+
         </div>
-        <p class="availability-note">Important: replace “ADD PRICE” and “Confirm” with accurate current details. Do not advertise rooms as available until you have checked.</p>
+
+        <p class="availability-note">
+          Replace the sample prices and availability with accurate
+          current details before publishing.
+        </p>
+
       </div>
     </section>
 
+    <!-- Facilities -->
     <section id="facilities" class="section facilities-section page-width">
+
       <div class="section-heading reveal">
         <p class="eyebrow">THE ESSENTIALS</p>
-        <h2 class="section-title">Made for everyday <em>living.</em></h2>
+
+        <h2 class="section-title">
+          Made for everyday <em>living.</em>
+        </h2>
       </div>
+
       <div class="facility-grid">
-        <article class="facility reveal"><span class="facility-icon">⌂</span><h3>Furnished rooms</h3><p>Add details about beds, storage and room setup.</p></article>
-        <article class="facility reveal"><span class="facility-icon">⌁</span><h3>Food</h3><p>Add meal timings, menu and whether food is included.</p></article>
-        <article class="facility reveal"><span class="facility-icon">⌁</span><h3>Wi-Fi</h3><p>Share your actual internet availability and rules.</p></article>
-        <article class="facility reveal"><span class="facility-icon">◷</span><h3>Water & power</h3><p>Explain the water, power backup and usage details.</p></article>
-        <article class="facility reveal"><span class="facility-icon">♧</span><h3>Washing facilities</h3><p>Add washing machine or laundry details if provided.</p></article>
-        <article class="facility reveal"><span class="facility-icon">⌑</span><h3>Safety & rules</h3><p>List only the security features and policies you really have.</p></article>
+
+        <article class="facility reveal">
+          <span class="facility-icon">⌂</span>
+          <h3>Furnished rooms</h3>
+          <p>Add details about beds, storage and room setup.</p>
+        </article>
+
+        <article class="facility reveal">
+          <span class="facility-icon">⌁</span>
+          <h3>Food</h3>
+          <p>Add meal timings, menu and whether food is included.</p>
+        </article>
+
+        <article class="facility reveal">
+          <span class="facility-icon">⌁</span>
+          <h3>Wi-Fi</h3>
+          <p>Share your actual internet availability and rules.</p>
+        </article>
+
+        <article class="facility reveal">
+          <span class="facility-icon">◷</span>
+          <h3>Water & power</h3>
+          <p>Explain the water and power backup facilities provided.</p>
+        </article>
+
+        <article class="facility reveal">
+          <span class="facility-icon">♧</span>
+          <h3>Washing facilities</h3>
+          <p>Add washing machine or laundry details if provided.</p>
+        </article>
+
+        <article class="facility reveal">
+          <span class="facility-icon">⌑</span>
+          <h3>Safety & rules</h3>
+          <p>List the security features and policies you actually have.</p>
+        </article>
+
       </div>
     </section>
 
+    <!-- Gallery -->
     <section id="gallery" class="section gallery-section">
+
       <div class="page-width">
+
         <div class="section-heading reveal">
           <p class="eyebrow">TAKE A LOOK AROUND</p>
-          <h2 class="section-title">A glimpse of <em>hostel life.</em></h2>
-          <p class="section-subtitle">Use real photos of your rooms, bathrooms, common areas and building exterior.</p>
+
+          <h2 class="section-title">
+            A glimpse of <em>hostel life.</em>
+          </h2>
+
+          <p class="section-subtitle">
+            Add real photos of your rooms, bathrooms, common areas
+            and building exterior.
+          </p>
         </div>
+
         <div class="gallery-grid">
-          <div class="gallery-item gallery-large reveal"><div class="media-placeholder"><span class="placeholder-icon">＋</span><span>ROOM PHOTO</span><small>1600 × 1100 px</small></div></div>
-          <div class="gallery-item reveal"><div class="media-placeholder"><span class="placeholder-icon">＋</span><span>BUILDING PHOTO</span><small>1000 × 1000 px</small></div></div>
-          <div class="gallery-item reveal"><div class="media-placeholder"><span class="placeholder-icon">＋</span><span>COMMON AREA</span><small>1000 × 1000 px</small></div></div>
-          <div class="gallery-item reveal"><div class="media-placeholder"><span class="placeholder-icon">＋</span><span>FOOD / FACILITY PHOTO</span><small>1200 × 900 px</small></div></div>
+
+          <div class="gallery-item gallery-large reveal">
+            <div class="media-placeholder">
+              <span class="placeholder-icon">＋</span>
+              <span>ROOM PHOTO</span>
+              <small>1600 × 1100 px</small>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <div class="media-placeholder">
+              <span class="placeholder-icon">＋</span>
+              <span>BUILDING PHOTO</span>
+              <small>1000 × 1000 px</small>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <div class="media-placeholder">
+              <span class="placeholder-icon">＋</span>
+              <span>COMMON AREA</span>
+              <small>1000 × 1000 px</small>
+            </div>
+          </div>
+
+          <div class="gallery-item reveal">
+            <div class="media-placeholder">
+              <span class="placeholder-icon">＋</span>
+              <span>FOOD / FACILITY PHOTO</span>
+              <small>1200 × 900 px</small>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
 
-  
-<section id="location" class="section location-section page-width">
-  <div class="location-copy reveal">
-    <p class="eyebrow">COME VISIT US</p>
+    <!-- Location -->
+    <section id="location" class="section location-section page-width">
 
-    <h2 class="section-title">
-      Find your way<br>
-      <em>to Nikilan.</em>
-    </h2>
+      <div class="location-copy reveal">
 
-    <p class="body-copy">
-      Visit Nikilan Men's Hostel at our Chromepet location.
-      Open the map to find directions to the hostel.
-    </p>
+        <p class="eyebrow">COME VISIT US</p>
 
-    <p class="address-line">
-      <span>⌖</span>
-      <span>
-        <b>Nikilan Men's Hostel</b><br>
-        1, 5th Main Rd, New Colony,<br>
-        Chromepet, Chennai, Tambaram,<br>
-        Tamil Nadu 600044
-      </span>
-    </p>
+        <h2 class="section-title">
+          Find your way<br>
+          <em>to Nikilan.</em>
+        </h2>
 
-    <a
-      id="mapLink"
-      href="https://www.google.com/maps/search/?api=1&query=Nikilan%20Men%27s%20Hostel%2C%201%2C%205th%20Main%20Rd%2C%20New%20Colony%2C%20Chromepet%2C%20Chennai%2C%20Tamil%20Nadu%20600044"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="gold-button"
-    >
-      Open Google Maps <span>↗</span>
-    </a>
-  </div>
+        <p class="body-copy">
+          Visit Nikilan Men's Hostel at our Chromepet location.
+          Open Google Maps to search for the hostel address.
+        </p>
 
-  <div class="map-placeholder reveal">
-    <div class="map-grid"></div>
-    <span class="map-pin">⌖</span>
-    <strong>NIKILAN MEN'S HOSTEL</strong>
-    <small>1, 5th Main Road, New Colony, Chromepet</small>
-    <a
-      href="https://maps.app.goo.gl/PDqav23wwQJYVnG56"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="map-text-link"
-    >
-      View saved location ↗
-    </a>
-  </div>
-</section>
+        <p class="address-line">
+          <span>⌖</span>
 
-<section id="contact" class="contact-section">
-  <div class="contact-inner page-width reveal">
-    <div>
-      <p class="eyebrow">READY TO CHECK IN?</p>
-      <h2 class="section-title">
-        Let's find your <em>room.</em>
-      </h2>
-      <p>
-        Ask us about current room availability, monthly rent
-        and facilities.
-      </p>
-    </div>
+          <span>
+            <b>Nikilan Men's Hostel</b><br>
+            1, 5th Main Rd, New Colony,<br>
+            Chromepet, Chennai, Tambaram,<br>
+            Tamil Nadu 600044
+          </span>
+        </p>
 
-    <div class="contact-actions">
-      <a
-        id="whatsappLink"
-        class="gold-button"
-        href="https://wa.me/919092111166"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        WhatsApp us <span>↗</span>
-      </a>
+        <a
+          id="mapLink"
+          href="https://www.google.com/maps/search/?api=1&query=1%2C%205th%20Main%20Rd%2C%20New%20Colony%2C%20Chromepet%2C%20Chennai%2C%20Tamil%20Nadu%20600044"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="gold-button">
 
-      <a
-        id="phoneLink"
-        class="outline-button"
-        href="tel:+919092111166"
-      >
-        Call hostel <span>↗</span>
-      </a>
-    </div>
-  </div>
-</section>
+          Open Google Maps <span>↗</span>
+        </a>
+
+      </div>
+
+      <div class="map-placeholder reveal">
+
+        <div class="map-grid"></div>
+
+        <span class="map-pin">⌖</span>
+
+        <strong>NIKILAN MEN'S HOSTEL</strong>
+
+        <small>
+          1, 5th Main Road, New Colony, Chromepet
+        </small>
+
+        <a
+          id="savedMapLink"
+          href="https://www.google.com/maps/search/?api=1&query=1%2C%205th%20Main%20Rd%2C%20New%20Colony%2C%20Chromepet%2C%20Chennai%2C%20Tamil%20Nadu%20600044"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="map-text-link">
+
+          View location ↗
+        </a>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+
+      <div class="contact-inner page-width reveal">
+
+        <div>
+          <p class="eyebrow">READY TO CHECK IN?</p>
+
+          <h2 class="section-title">
+            Let's find your <em>room.</em>
+          </h2>
+
+          <p>
+            Ask us about current room availability, monthly rent
+            and facilities.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+
+          <a
+            id="whatsappLink"
+            class="gold-button"
+            href="https://wa.me/919092111166"
+            target="_blank"
+            rel="noopener noreferrer">
+
+            WhatsApp us <span>↗</span>
+          </a>
+
+          <a
+            id="phoneLink"
+            class="outline-button"
+            href="tel:+919092111166">
+
+            Call hostel <span>↗</span>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
   </main>
 
+  <!-- Footer -->
   <footer class="site-footer">
+
     <div class="page-width footer-inner">
-      <a class="brand footer-brand" href="#home"><div class="brand-mark small">NI</div><div><strong>NIKILAN</strong><small>MEN'S HOSTEL</small></div></a>
+
+      <a class="brand footer-brand" href="#home">
+
+        <div class="brand-mark small">NI</div>
+
+        <div>
+          <strong>NIKILAN</strong>
+          <small>MEN'S HOSTEL</small>
+        </div>
+
+      </a>
+
       <p>Comfortable living starts with the right place.</p>
-      <span>© <span id="year"></span> Nikilan Men's Hostel</span>
+
+      <span>
+        © <span id="year"></span> Nikilan Men's Hostel
+      </span>
+
     </div>
   </footer>
 
-  <button id="backTop" class="back-top" aria-label="Back to top">↑</button>
+  <!-- Back to top -->
+  <button id="backTop" class="back-top" aria-label="Back to top">
+    ↑
+  </button>
+
+  <!-- JavaScript -->
   <script src="script.js"></script>
+
 </body>
 </html>
