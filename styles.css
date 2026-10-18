@@ -954,6 +954,83 @@ button {
     transform: translateY(0);
 }
 
+/* Image word */
+
+
+
+.bathroom-card {
+  position: relative;
+  width: 100%;
+  height: 320px;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.bathroom-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.bathroom-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  color: #ffffff;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.85),
+    rgba(0, 0, 0, 0.35),
+    transparent
+  );
+}
+
+.bathroom-tag {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+  color: #facc15;
+}
+
+.bathroom-overlay h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 10px;
+}
+
+.bathroom-overlay p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 3px 0;
+  color: #ffffff;
+}
+
+@media (max-width: 600px) {
+  .bathroom-card {
+    height: 280px;
+  }
+
+  .bathroom-overlay {
+    padding: 18px;
+  }
+
+  .bathroom-overlay h3 {
+    font-size: 20px;
+  }
+
+  .bathroom-overlay p {
+    font-size: 14px;
+  }
+}
+
+
 @keyframes introRise {
     from {
         opacity: 0;
